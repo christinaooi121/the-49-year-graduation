@@ -23,6 +23,7 @@ async function initGame() {
         const response = await fetch('data.json');
         if (!response.ok) throw new Error("無法讀取 data.json");
         gameData = await response.json();
+        /* Cover */
         renderScene("Cover"); 
     } catch (error) {
         console.error(error);
@@ -224,7 +225,7 @@ function finishTypingImmediately(onComplete) {
     if (onComplete) onComplete();
 }
 
-// --- 6. 選項互動邏輯 (支援標題雙擊版) ---
+// --- 6. 選項互動邏輯 (手機雙擊修復版) ---
 function setupInteraction(choices) {
     const dialogueBox = document.getElementById('dialogue-box');
     const nextIndicator = document.querySelector('.next-indicator');
@@ -239,24 +240,36 @@ function setupInteraction(choices) {
     // 先移除所有點擊，避免誤觸
     dialogueBox.classList.remove('clickable');
     dialogueBox.onclick = null;
-    dialogueBox.ondblclick = null; // 清除雙擊事件
+    dialogueBox.ondblclick = null; 
 
     const isHiddenUI = gameContainer.classList.contains('hide-ui');
     const isGallery = dialogueBox.classList.contains('style-gallery');
     const isTitle = gameContainer.classList.contains('title-mode');
 
     // --- 優先級 1: 標題模式 (Title Mode) ---
-    // 需求：不顯示按鈕，雙擊螢幕任意處開始
+    // 需求：不顯示按鈕，手動偵測雙擊 (相容手機)
     if (isTitle) {
-        // 因為 CSS 已經把 dialogueBox 變成全螢幕透明層了，直接綁定在它上面
         dialogueBox.classList.add('clickable');
         
-        dialogueBox.ondblclick = () => {
-            if (choices && choices.length > 0) {
-                executeChoice(choices[0]);
+        let lastTapTime = 0; // 用來記錄上一次點擊的時間
+
+        dialogueBox.onclick = (e) => {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTapTime;
+
+            // 如果兩次點擊間隔小於 500 毫秒 (0.5秒)，且大於 0，視為雙擊
+            if (tapLength < 500 && tapLength > 0) {
+                // 觸發雙擊成功
+                if (choices && choices.length > 0) {
+                    executeChoice(choices[0]);
+                }
+                e.preventDefault(); // 防止連點可能產生的副作用
             }
+            
+            // 更新上一次點擊時間
+            lastTapTime = currentTime;
         };
-        return; // 設定完成，結束函式
+        return; 
     }
     
     // --- 優先級 2: 純畫面模式 (Hide UI) ---
