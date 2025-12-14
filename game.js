@@ -225,7 +225,7 @@ function finishTypingImmediately(onComplete) {
     if (onComplete) onComplete();
 }
 
-// --- 6. 選項互動邏輯 (手機雙擊修復版) ---
+// --- 6. 選項互動邏輯 (封面單擊版) ---
 function setupInteraction(choices) {
     const dialogueBox = document.getElementById('dialogue-box');
     const nextIndicator = document.querySelector('.next-indicator');
@@ -247,28 +247,17 @@ function setupInteraction(choices) {
     const isTitle = gameContainer.classList.contains('title-mode');
 
     // --- 優先級 1: 標題模式 (Title Mode) ---
-    // 需求：不顯示按鈕，手動偵測雙擊 (相容手機)
+    // 需求：全螢幕封面，點擊任意處一次，直接開始
     if (isTitle) {
-        dialogueBox.classList.add('clickable');
-        
-        let lastTapTime = 0; // 用來記錄上一次點擊的時間
-
-        dialogueBox.onclick = (e) => {
-            const currentTime = new Date().getTime();
-            const tapLength = currentTime - lastTapTime;
-
-            // 如果兩次點擊間隔小於 500 毫秒 (0.5秒)，且大於 0，視為雙擊
-            if (tapLength < 500 && tapLength > 0) {
-                // 觸發雙擊成功
+        // 加入 200ms 延遲，防止玩家在上一個畫面連點導致誤觸
+        setTimeout(() => {
+            dialogueBox.classList.add('clickable');
+            dialogueBox.onclick = () => {
                 if (choices && choices.length > 0) {
                     executeChoice(choices[0]);
                 }
-                e.preventDefault(); // 防止連點可能產生的副作用
-            }
-            
-            // 更新上一次點擊時間
-            lastTapTime = currentTime;
-        };
+            };
+        }, 200);
         return; 
     }
     
@@ -346,7 +335,6 @@ function setupInteraction(choices) {
         };
     }, 50);
 }
-
 function checkCondition(conditionStr) {
     if (!conditionStr) return true; 
     try {
