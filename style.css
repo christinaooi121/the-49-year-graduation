@@ -1,0 +1,263 @@
+/* --- 1. 全局設定 --- */
+html, body {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    /* 使用 dvh 解決手機網址列問題 */
+    height: 100vh; height: 100dvh; 
+    background-color: #000; overflow: hidden;
+}
+
+body {
+    display: flex; justify-content: center; align-items: center;
+    font-family: "Noto Serif TC", "Songti TC", serif; color: #dcdcdc;
+}
+
+/* --- 2. 遊戲容器 --- */
+#game-container {
+    position: relative; width: 100%; max-width: 480px; 
+    height: 100%; background-color: #000;
+    overflow: hidden; box-shadow: 0 0 50px rgba(0,0,0,0.8); z-index: 1;
+}
+
+/* --- 3. 背景與圖層 --- */
+#bg-layer, #char-layer, #vfx-vignette, #vfx-noise, #ui-layer {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;
+}
+
+#bg-layer img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+    filter: sepia(30%) contrast(110%) brightness(60%); transition: opacity 2.0s ease-in-out;
+}
+
+#char-img {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    max-height: 85%; max-width: 95%; width: auto;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.7)); transition: opacity 0.5s ease;
+}
+
+/* --- 4. 視覺特效 --- */
+#vfx-vignette {
+    z-index: 10; background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%); pointer-events: none;
+}
+#vfx-noise {
+    z-index: 11; pointer-events: none; opacity: 0.15;
+    background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.1"/%3E%3C/svg%3E');
+}
+
+/* --- 5. UI 層 (關鍵：層級設定) --- */
+#ui-layer { z-index: 20; pointer-events: none; }
+
+#status-bar {
+    position: absolute; top: 15px; left: 15px; display: flex; gap: 15px; pointer-events: auto;
+}
+.stat-item {
+    font-family: 'Courier Prime', monospace; font-size: 14px;
+    background: rgba(0, 0, 0, 0.6); border: 1px solid #555; padding: 4px 12px;
+    border-radius: 4px; color: #aaa;
+}
+.stat-item span { color: #fff; font-weight: bold; margin-left: 5px; }
+
+/* --- 對話框 (預設樣式) --- */
+#dialogue-box {
+    position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0);
+    width: 90%; height: auto; min-height: 150px; max-height: 40vh;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #4a4a4a; border-top: 3px solid #8c2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    padding: 20px; padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    box-sizing: border-box; pointer-events: auto;
+    display: flex; flex-direction: column;
+    transition: transform 0.1s linear, background-color 0.3s;
+    animation: slide-up-entry 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    
+    /* 預設層級：比選項層低一點點，或視情況而定 */
+    z-index: 100; 
+}
+
+@media (max-width: 480px) {
+    #dialogue-box { width: 94%; bottom: 10px; min-height: 140px; max-height: 45vh; }
+}
+
+@keyframes slide-up-entry {
+    0% { opacity: 0; transform: translate(-50%, 20px); }
+    100% { opacity: 1; transform: translate(-50%, 0); }
+}
+
+#dialogue-box.clickable:active { transform: translate(-50%, 0) scale(0.98); }
+
+#name-tag {
+    position: absolute; top: -14px; left: -1px;
+    background: #8c2a2a; color: #fff; padding: 4px 15px;
+    /*border: 1px solid #8c2a2a;*/
+    font-size: 14px; font-weight: 500; letter-spacing: 1px; display: none; 
+}
+
+#dialogue-text {
+    flex: 1; width: 100%; margin-top: 5px;
+    font-size: 18px; line-height: 1.6; color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    overflow-y: auto; scroll-behavior: smooth;
+    position: relative; z-index: 100;
+    font-family: "Noto Serif TC", "Songti TC", serif, sans-serif;
+    white-space: pre-wrap; 
+}
+
+.next-indicator {
+    position: absolute; bottom: 8px; right: 12px;
+    color: #8c2a2a; font-size: 14px; z-index: 101;
+    animation: bounce 1s infinite; display: none;
+}
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+/* --- 系統提示 --- */
+#dialogue-box.style-system {
+    bottom: 50%; left: 50%; transform: translate(-50%, 50%);
+    height: auto; min-height: auto; width: 85%;
+    background: rgba(0, 0, 0, 0.95); border: 2px solid #d4a017;
+    text-align: center; align-items: center; z-index: 50;
+    animation: system-pop-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes system-pop-in {
+    0% { opacity: 0; transform: translate(-60%, 50%) scale(0.9); }
+    100% { opacity: 1; transform: translate(-50%, 50%) scale(1); }
+}
+#dialogue-box.style-system.clickable:active { transform: translate(-50%, 50%) scale(0.98); }
+#dialogue-box.style-system #dialogue-text { color: #f0c040 !important; font-weight: bold; overflow-y: visible; flex: 0 0 auto; }
+#dialogue-box.style-system #name-tag, #dialogue-box.style-system .next-indicator { display: none !important; }
+
+/* --- 章節標題 --- */
+#dialogue-box.style-chapter {
+    width: 100% !important; height: 100% !important;
+    top: 0; left: 0; bottom: auto; transform: none; max-height: none;
+    background: rgba(0, 0, 0, 0.85); border: none; box-shadow: none;
+    justify-content: center; align-items: center; text-align: center;
+    opacity: 0; animation: chapter-fade-in 3.0s forwards;
+    z-index: 100;
+}
+@keyframes chapter-fade-in { from { opacity: 0; } to { opacity: 1; } }
+#dialogue-box.style-chapter.clickable:active { transform: none !important; }
+#dialogue-box.style-chapter #dialogue-text {
+    font-size: 36px; font-weight: 700; letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.8); overflow: visible; flex: 0 0 auto;
+}
+#dialogue-box.style-chapter #name-tag, #dialogue-box.style-chapter .next-indicator { display: none !important; }
+
+/* --- 畫廊模式 (修復版) --- */
+#dialogue-box.style-gallery {
+    /* 1. 位置：絕對置中 */
+    top: 45%; left: 50%; bottom: auto;
+    transform: translate(-50%, -50%);
+    
+    /* 2. 層級：必須比 #choices-overlay (2000) 高，才能浮在黑色背景上 */
+    z-index: 2001;
+    
+    /* 3. 外觀 */
+    width: 90%; max-width: 400px;
+    height: auto; min-height: 320px;
+    background: rgba(25, 25, 25, 0.98);
+    border: 2px solid #d4a017;
+    box-shadow: 0 0 40px rgba(0,0,0,1);
+    
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    animation: gallery-pop 0.5s ease-out;
+}
+
+@keyframes gallery-pop {
+    0% { opacity: 0; transform: translate(-50%, -45%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* 畫廊內的文字 */
+#dialogue-box.style-gallery #dialogue-text {
+    flex: 0 0 auto; height: auto; overflow: visible;
+}
+
+/* 畫廊網格 */
+.gallery-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 10px;
+}
+.end-card {
+    background: rgba(0, 0, 0, 0.6); border: 1px solid #444; border-radius: 8px;
+    padding: 10px; text-align: center;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    min-height: 90px;
+}
+.end-card.locked { opacity: 0.5; border-style: dashed; }
+.end-card.locked .icon { font-size: 24px; margin-bottom: 5px; filter: grayscale(100%); }
+.end-card.locked .title { font-size: 14px; color: #888; }
+.end-card.unlocked { background: rgba(140, 42, 42, 0.3); border-color: #d4a017; box-shadow: 0 0 10px rgba(212, 160, 23, 0.2); }
+.end-card.unlocked .icon { font-size: 24px; margin-bottom: 5px; }
+.end-card.unlocked .title { font-size: 15px; font-weight: bold; color: #f0c040; }
+
+/* --- 畫廊模式下的選項層修正 --- */
+/* 當進入畫廊時，將選項層的按鈕推到最下方 */
+.gallery-active #choices-overlay {
+    background: rgba(0,0,0,0.85); /* 確保背景變黑 */
+    justify-content: flex-end; /* 按鈕靠底 */
+    padding-bottom: 40px; /* 底部留白 */
+    z-index: 2000; /* 比畫廊低，作為背景 */
+}
+
+/* --- 選項按鈕層 --- */
+#choices-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    z-index: 2000; opacity: 0; visibility: hidden; transition: opacity 0.4s;
+}
+#choices-overlay.active { opacity: 1; visibility: visible; }
+
+.choice-btn {
+    width: 80%; padding: 18px; margin: 10px 0;
+    background: transparent; border: 1px solid #666; color: #fff;
+    font-family: "Noto Serif TC", serif; font-size: 16px; text-align: center;
+    pointer-events: auto; cursor: pointer; transition: all 0.2s; white-space: normal;
+    
+    /* 確保按鈕在選項層的最上層，可點擊 */
+    position: relative; z-index: 2002; 
+}
+.choice-btn:hover { background: #8c2a2a; border-color: #8c2a2a; transform: scale(1.02); }
+.choice-btn:active { transform: scale(0.98); }
+.choice-btn.locked { background: rgba(50, 50, 50, 0.5); border-color: #555; color: #888; cursor: not-allowed; }
+.choice-btn.locked:hover { transform: none; background: rgba(50, 50, 50, 0.5); }
+
+/* 其他樣式 */
+#dialogue-box.style-thought #dialogue-text { font-style: italic; }
+.hide-ui #dialogue-box {
+    /* 1. 強制隱形 */
+    opacity: 0 !important; background: transparent !important; box-shadow: none !important; border: none !important;
+    /* 2. 殺死所有動畫與過渡 (關鍵！) */
+    animation: none !important; transition: none !important; transform: none !important;
+    /* 3. 解除尺寸限制，強制鋪滿 */
+    width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; min-height: 0 !important;
+    /* 4. 定位歸零 */
+    top: 0 !important; left: 0 !important; bottom: auto !important; right: auto !important;
+    /* 5. 保留點擊功能 */
+    pointer-events: auto !important; z-index: 3000; cursor: pointer; }
+.hide-ui #choices-overlay { display: none !important; }
+.hide-ui .choice-btn { display: none !important; }
+
+#toast-msg {
+    position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, 20px);
+    background: rgba(140, 42, 42, 0.95); color: #fff; border: 1px solid #ff6b6b;
+    padding: 12px 24px; border-radius: 4px; font-size: 16px; font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 3000;
+    opacity: 0; visibility: hidden; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+#toast-msg.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+#sys-icon { display: none; width: 48px; height: 48px; margin-bottom: 10px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4a017'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+#dialogue-box.style-system.with-icon #sys-icon { display: block; }
+.typing-cursor::after { content: '▋'; color: #fff; animation: blink 1s infinite; margin-left: 5px; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+#dialogue-box.style-gallery.clickable:active {
+    transform: translate(-50%, -50%) !important;
+    /* 如果想要有點擊感，可以只縮放，不位移 */
+    transform: translate(-50%, -50%) scale(0.99) !important;
+}
+
+/* 確保畫廊模式下的滑鼠游標是正常的 (因為我們不希望玩家點盒子本身) */
+#dialogue-box.style-gallery {
+    cursor: default; 
+}

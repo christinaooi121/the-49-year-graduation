@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨越𝟒𝟗年的畢業證書</title>
+    <link rel="icon" href="images/game_icon_2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        
+        <div id="vfx-noise"></div>
+        <div id="vfx-vignette"></div>
+
+        <div id="bg-layer">
+            <img id="bg-img" src="" alt="背景">
+        </div>
+
+        <div id="char-layer">
+            <img id="char-img" src="" alt="角色">
+        </div>
+
+        <div id="ui-layer">
+            
+            <div id="status-bar">
+                <div class="stat-item">理想 <span id="val-idealism">0</span></div>
+                <div class="stat-item">疏離 <span id="val-alienation">0</span></div>
+            </div>
+
+            <div id="dialogue-box">
+                <div id="sys-icon"></div> 
+                <div id="name-tag"></div>
+                <div id="dialogue-text"></div>
+                <div class="next-indicator">▼</div>
+            </div>
+
+            <div id="choices-overlay"></div>
+            <div id="toast-msg"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

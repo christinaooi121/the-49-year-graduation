@@ -1,0 +1,1721 @@
+{
+  "game_title": "跨越49年的畢業證書",
+  "scenes": [
+    {
+      "scene_id": "Chapter_00_Title",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "序章\n49年後的獨白",
+      "choices": [
+        { "text": "...", "next_scene_id": "Prologue_01" }
+      ]
+    },
+    {
+      "scene_id": "Prologue_01",
+      "bg_img": "images/char_fred_old_confess_dark.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "一般的大學學程是四年。\n\n但我從入學到拿到畢業證書，\n居然不小心花了四十九年。\n\n1968年，我懷抱夢想踏入校園。\n2017年，我才終於領到了那張畢業證書。\n\n這中間消失的半個世紀，我去了哪裡？\n\n為什麼這條畢業的路，會充滿了淚水與血腥？\n\n我想請你，跟我一起重新回到1971年的臺南，那個晴天。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Prologue_End" }
+      ]
+    },
+    {
+      "scene_id": "Prologue_End",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【系統】", 
+      "text": "現在開始，你就是Fred。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Chapter_01_Title" }
+      ]
+    },
+    {
+      "scene_id": "Chapter_01_Title",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "第①章\n最後一個晴天",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_01" }
+      ]
+    },
+    {
+      "scene_id": "Event_01",
+      "bg_img": "images/bg_library.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你是Fred，21歲，來自馬來西亞的僑生。\n\n這裡是台南美國新聞處，是你最喜歡的避風港。\n\n不僅是因為這裡有全台南最強的冷氣，更因為這裡有你熟悉的英文。\n\n你的中文不是那麼好，大學課堂上的筆記總是抄得七零八落。\n\n但在這裡，翻開《讀者文摘》或《Time》雜誌，那些熟悉的英文字母讓你重新連結起對未來的篤定。\n\n你從未忘記，台灣只是你人生的中繼站。\n\n你的口袋裡有一張通往未來的車票——那是你已經申請到的英國利物浦大學入學許可。\n\n在這裡閱讀，是為了不讓自己在全中文的環境裡迷失，更是為了去英國深造做準備。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_01_Sys" }
+      ]
+    },
+    {
+      "scene_id": "Event_01_Sys",
+      "bg_img": "images/bg_library.png",
+      "char_img": "",
+      "speaker": "【系統】", 
+      "text": "這款遊戲沒有「存檔」。\n你的選擇將改變Fred的內心世界。\n\n理想：你相信世界是講道理的。\n疏離：你感覺自己不屬於這裡。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_01_Exit" }
+      ]
+    },
+    {
+      "scene_id": "Event_01_Exit",
+      "bg_img": "images/bg_library_door.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "牆上的時鐘指向下午五點。\n\n你剛結束一整天的復習，收拾好書包，走到美新處厚重的玻璃門前。",
+      "choices": [
+        { "text": "離開", "next_scene_id": "Event_02_Street" }
+      ]
+    },
+    {
+      "scene_id": "Event_02_Street",
+      "bg_img": "images/bg_street_banner.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "一股濕熱的熱浪瞬間襲來。\n\n你走了幾步，眼光落在電線桿上的橫幅：「匪諜自首既往不咎」。\n\n對於從小接受英式教育的你來說，這種肅殺的政治口號顯得既陌生又突兀。\n\n剛才在圖書館裡的世界是開放、理性的。\n\n踏出門外，空氣中似乎總瀰漫著一股說不出的緊張感。\n\n看著這些標語，你心想：",
+      "choices": [
+        { "text": "「專心讀書就好，這裡的規矩與我無關。」", "next_scene_id": "Event_02_ChoiceA", "attribute_changes": { "idealism": 1, "alienation": 0 } },
+        { "text": "「這種氣氛真讓人窒息，還是快點回宿舍吧。」", "next_scene_id": "Event_02_ChoiceB", "attribute_changes": { "idealism": 0, "alienation": 1 } }
+      ]
+    },
+    {
+      "scene_id": "Event_02_ChoiceA",
+      "bg_img": "images/bg_street_banner.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你決定無視這些標語。\n\n你只是個僑生，這裡的政治與你無關。\n\n你唯一的煩惱是下週的工程數學考試，還有等下晚餐要吃什麼。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Street_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_02_ChoiceB",
+      "bg_img": "images/bg_street_banner.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你本能地加快了腳步。\n\n雖然說不上來為什麼，但這些警告讓你覺得自己像是個被監視的外人，在這個環境裡始終無法完全放鬆。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Street_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Street_Scene",
+      "bg_img": "images/bg_street_evening.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "...",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Street" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Street",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "那天台南的天氣很好，天色很漂亮。\n\n你正走在回宿舍的路上，想著先洗個澡，晚上再去女友家吃飯。\n\n就在轉進巷口時，一個穿著西裝的中年男子突然擋住了你的去路。\n\n在這個大學生穿著汗衫拖鞋趴趴走的校區，他的西裝顯得格格不入。\n\n快經過他時，他的目光落在你身上。",
+      "choices": [
+        { "text": "停下腳步", "next_scene_id": "Event_03_Stranger" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Stranger",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "images/char_stranger_smirk.png",
+      "speaker": "陌生男子", 
+      "text": "同學！同學！\n\n請問你認不認識一位叫Fred的同學？\n\n聽說他就住在這附近。",
+      "choices": [
+        { "text": "「這麼巧？我就是Fred。」", "next_scene_id": "Event_03_ResponseA", "attribute_changes": { "idealism": 1, "alienation": 0 } },
+        { "text": "「請問你是誰？找他有什麼事？」", "next_scene_id": "Event_03_ResponseB", "attribute_changes": { "idealism": 0, "alienation": 1 } }
+      ]
+    },
+    {
+      "scene_id": "Event_03_ResponseA",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你毫無戒心，覺得這只是個巧合。或許是學校有什麼事找你。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_ResponseB",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你雖然單純，但異鄉生活的直覺讓你對陌生人保持了一絲距離。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "images/char_stranger_grin.png",
+      "speaker": "陌生男子", 
+      "text": "（露出和善的笑容）太好了，終於找到你了。\n\n別緊張，是有個好消息。\n\n是這樣的，你有個親戚，好像姓蔡，剛從馬來西亞來台灣。\n\n他現在在台北，因為行程太滿沒辦法南下。\n\n他託我們來接你上去一趟，想見見你，順便拿點東西給你。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap_Thinking" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap_Thinking",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "親戚？你想了一下。\n\n雖然印象中沒有姓蔡的親戚，但或許是遠房長輩？\n\n離家這麼多年，一聽到「馬來西亞來的親人」，你的心跳漏了一拍。\n\n那是一種混雜著思鄉與驚喜的電流。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap_2",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "真的嗎？那...請等我一下。我馬上回宿舍換件衣服。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap_2_Action" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap_2_Action",
+      "bg_img": "images/bg_street_evening.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你轉身想往巷子裡的宿舍走。\n\n身為晚輩，你覺得兩手空空去見親戚太失禮了。\n\n你準備回宿舍拿點錢，打算請長輩吃飯。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap_3" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap_3",
+      "bg_img": "images/bg_street_evening_opposite.png",
+      "char_img": "images/char_stranger_upset.png",
+      "speaker": "陌生男子", 
+      "text": "（語氣突然變得急促，擋住你的去路）不用了！不用了！\n\n時間很趕，我們的車就在對面街上。\n\n反正見個面就回來了，不用這麼麻煩。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_03_Trap_3_Action" }
+      ]
+    },
+    {
+      "scene_id": "Event_03_Trap_3_Action",
+      "bg_img": "images/bg_car_outside.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "此時，一輛黑色的轎車無聲地滑行到你們身邊。\n\n車窗搖下，裡面坐著另外三個壯漢。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "images/char_stranger_upset.png",
+      "speaker": "", 
+      "text": "半推半就下，你被帶到了車邊。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car_Speak" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_Speak",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "images/char_stranger_smirk.png",
+      "speaker": "陌生男子", 
+      "text": "上車吧，明天一早就送你回來上課。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car_Atmosphere" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_Atmosphere",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "男子拍拍你的肩膀，語氣像是在安撫一個孩子。\n\n夕陽西下，將行人的影子拉得很長。\n\n你看著車內狹窄的後座空間，又看了看只有幾步之遙的宿舍巷口。\n\n你的直覺感到一絲不尋常的壓迫感。\n\n眼前這位長官的熱情與強勢，加上對家鄉親人的渴望，讓你陷入了兩難。",
+      "choices": [
+        { "text": "順從地上車", "next_scene_id": "Event_04_Car_ChoiceA", "attribute_changes": { "idealism": 1, "alienation": 0 } },
+        { "text": "猶豫，試圖推辭", "next_scene_id": "Event_04_Car_ChoiceB", "attribute_changes": { "idealism": 0, "alienation": 2 } }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_ChoiceA",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "既然人家大老遠跑來接我，讓人家等太久很失禮。\n\n而且這是光天化日之下，應該不會有什麼問題吧？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car_ChoiceA_1" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_ChoiceA_1",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你壓下心中的疑慮，坐進了後座。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Abduction" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_ChoiceB",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你停下腳步，身體微微後退。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car_ChoiceB_Speak" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_ChoiceB_Speak",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "可是我明天還有課...而且我還是想先跟室友說一聲...",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_04_Car_ChoiceB_Action" }
+      ]
+    },
+    {
+      "scene_id": "Event_04_Car_ChoiceB_Action",
+      "bg_img": "images/bg_car_outside_2.png",
+      "char_img": "images/char_stranger_upset.png",
+      "speaker": "", 
+      "text": "話還沒說完，身後的男子「扶」了你一把，力道大得驚人。\n\n在半強迫的推力下，你幾乎是被推進後座的。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Abduction" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Abduction",
+      "bg_img": "images/bg_car_inside.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "車門「砰」地一聲關上。\n\n兩個壯漢一左一右把你夾在中間。\n\n冷氣開得很強，車內卻瀰漫著一股說不出的煙味與壓迫感。\n\n車子發動，駛離了勝利路。你看著窗外熟悉的成大圍牆迅速後退。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Fred" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Fred",
+      "bg_img": "images/bg_car_inside.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "（怯生生地）不好意思...長官...\n\n那個....我想了一下，我好像真的沒有姓蔡的親戚。\n\n請問一下，我們是要去哪裡？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Ask" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Ask",
+      "bg_img": "images/bg_car_inside.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "前座的男子回頭，原本和善的笑容消失了，冷冷地看著你。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Stranger_Cool" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Stranger_Cool",
+      "bg_img": "images/bg_car_inside.png",
+      "char_img": "images/char_stranger_upset.png",
+      "speaker": "長官", 
+      "text": "你是真傻還是裝傻？\n\n你自己做的事，你自己心裡清楚。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_No_Reply" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_No_Reply",
+      "bg_img": "images/bg_car_inside.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你開始慌張，試著繼續詢問。\n\n但車上的人再也沒有回答你的任何問題。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Scene",
+      "bg_img": "images/bg_car_inside.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_05_Ending" }
+      ]
+    },
+    {
+      "scene_id": "Event_05_Ending",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1971年3月3日。那堂物理化學課，成了你在成大的最後一堂課。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Chapter_02_Title" }
+      ]
+    },
+    {
+      "scene_id": "Chapter_02_Title",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "第②章\n指尖上的永夜",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Scene",
+      "bg_img": "images/bg_sanzhangli.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Arrival" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Arrival",
+      "bg_img": "images/bg_sanzhangli.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1971年3月4日，清晨。台北，調查局三張犁招待所。\n\n車子開了整整一夜，將近二十個小時，徹夜未闔眼的你疲憊不堪。\n\n車子經過了許多稻田，終於駛入了守衛深嚴的高牆內。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Intro" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Intro",
+      "bg_img": "images/bg_interrogation_light.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "下車後，你被推進一間狹窄的密室。\n\n這裡沒有你的親戚，只有刺眼的檯燈，直直照著你的眼睛。\n\n不知過了多久，調查官準備開口，才終於移開了強光。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Question" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Intro",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你還在揉著眼睛，只見調查官將一份厚厚的卷宗摔在桌上。\n\n那檔案裡面，竟然密密麻麻記錄了你過去幾個月的行蹤。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Question" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Question",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator.png",
+      "speaker": "調查官", 
+      "text": "（看了文件，再看著你）你就是Fred啊。\n\n成大化工系，住在台南勝利路，馬來西亞華僑，1967年來台。\n\n（漫不經心地翻動著文件）你很用功嘛，課餘時間不待在學校。\n\n天天往美國新聞處跑？在那裡幹嘛？",
+      "choices": [
+        { "text": "如實回答", "next_scene_id": "Event_06_Ans_A", "attribute_changes": { "idealism": 0, "alienation": 0 } },
+        { "text": "不滿地反問", "next_scene_id": "Event_06_Ans_B", "attribute_changes": { "idealism": 0, "alienation": 1 } }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Ans_A",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "（緊張地）長官...我...\n\n我只是去讀《讀者文摘》和《Time》。\n\n那裡有冷氣，安靜好讀書……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Rebuttal" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Ans_B",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "他們山長水遠帶你來這裡，你無法理解他問這些是為了什麼。\n\n疲憊讓你難以克制情緒，不滿的話脫口而出。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Ask_Back" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Ask_Back",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "怎麼？那裡是對外開放的圖書館，為什麼我不能去？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_06_Rebuttal_Angry" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Rebuttal",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator.png",
+      "speaker": "調查官", 
+      "text": "（挑眉）讀書？成大圖書館沒書給你讀嗎？非要跑去那種敏感地方？\n\n我看你是去「踩點」，看看哪裡最適合放你的炸彈吧！",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Truth" }
+      ]
+    },
+    {
+      "scene_id": "Event_06_Rebuttal_Angry",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator_angry.png",
+      "speaker": "調查官", 
+      "text": "（猛拍桌子）你還敢問！\n\n那裡是是開放是給老百姓去的，不是給你這種別有用心的僑生去的！\n\n我看你是去觀察地形、紀錄警衛換班時間，方便你放炸彈吧！",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Truth" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Truth",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你終於聽懂了他們在說什麼。\n\n去年(1970)十月，台南美新處發生過一起爆炸案。\n\n你當然知道這件事，當時新聞有報，你還慶幸自己那時候不在現場。\n\n但你沒想到，在你眼中單純的「求知」，在他們眼中變成了「預謀」。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Accusation" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Accusation",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator.png",
+      "speaker": "調查官", 
+      "text": "我們觀察你好幾個月了。\n\n爆炸案發生前，你頻繁出入現場；爆炸案後，你還敢再去。\n\n看起來你心理素質不錯嘛？還是演技不錯？",
+      "choices": [
+        { "text": "否認", "next_scene_id": "Event_07_Denial" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Accusation_2",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator_angry.png",
+      "speaker": "調查官", 
+      "text": "（猛拍桌子）說！炸彈是不是你放的？",
+      "choices": [
+        { "text": "否認", "next_scene_id": "Event_07_Denial" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Denial",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": ".png",
+      "speaker": "Fred", 
+      "text": "不是我！真的不是我！\n\n我什麼都不知道！我只是去吹冷氣唸書而已！",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Punch" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Punch",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator_smirk.png",
+      "speaker": "調查官", 
+      "text": "吹冷氣？（冷笑）這種理由虧你想得出來！把我們當三歲小孩耍？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Pain" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Pain",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "一記重拳揮在你的腹部。\n\n你痛得彎下腰，膽汁幾乎要吐出來。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Pain_Fred" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Pain_Fred",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "（虛弱地說）對、對不起，對不起……長官……\n\n求求你們……告訴我，你們到底要什麼？\n\n我真的不知道炸彈的事，我什麼都可以告訴你……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Violence" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Violence",
+      "bg_img": "images/bg_interrogation_floor_blur.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你崩潰地哀求，希望能用順從換取一點憐憫。\n\n但你的哀求只換來了更猛烈的暴力。\n\n重拳像雨點般落下，直到你感覺腹部一陣翻攪，一口鮮血吐在了地板上。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Blood" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Blood",
+      "bg_img": "images/bg_interrogation_floor_blood.png",
+      "char_img": "images/char_investigator_smirk.png",
+      "speaker": "", 
+      "text": "調查官停下動作，冷冷地看了你一眼，再看著地上的那一灘暗紅色的血。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_07_Humiliation" }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Humiliation",
+      "bg_img": "images/bg_interrogation_floor_blood.png",
+      "char_img": "images/char_investigator_smirk.png",
+      "speaker": "調查官", 
+      "text": "（皺眉）你看看，你弄髒地板了。\n\n（指著暗紅色的血塊）來，把它吃回去。要舔乾淨哦。",
+      "choices": [
+        { "text": "屈辱地照做", "next_scene_id": "Event_07_Done", "attribute_changes": { "idealism": -1, "alienation": 1 } },
+        { "text": "僵在原地", "next_scene_id": "Event_07_Done", "attribute_changes": { "idealism": 0, "alienation": 0 } }
+      ]
+    },
+    {
+      "scene_id": "Event_07_Done",
+      "bg_img": "images/bg_interrogation_floor_blood.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "在暴力和恐懼的脅迫下，你的尊嚴蕩然無存。\n\n最終，你被迫趴在地上……\n\n……………………\n\n……………………\n\n那股鐵鏽般的腥味充滿了口腔，讓你作嘔。\n\n他們還是沒有因為你的服從而改變態度。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Interrogate" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Interrogate",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "images/char_investigator_angry.png",
+      "speaker": "調查官", 
+      "text": "再給你一次機會，說！炸彈是不是你放的？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Fred_Cry" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Fred_Cry",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "（喘息）我真的……只是去……讀書……你們……可以查……\n\n那裡的……Librarian……他們……也知道……我……都在……看書……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Torture_Start" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Torture_Start",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "images/char_investigator_smirk.png",
+      "speaker": "調查官", 
+      "text": "還在編故事？\n\n（冷笑）看來不動點真格的，你是不會老實的。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Table" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Table",
+      "bg_img": "images/bg_interrogation_blur.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "他們抓起你的頭髮，將你的臉用力壓向桌面。\n\n你艱難地轉頭望去，他們拿出了一盒大頭針。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Scene",
+      "bg_img": "images/bg_pins.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Scene2" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Scene2",
+      "bg_img": "images/bg_hand_torture.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_08_Pins" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Pins",
+      "bg_img": "images/bg_hand_torture.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你的左手被大力地壓在桌上。\n\n調查官拿起圖釘，尖銳的針尖抵住了你的指甲縫。\n\n你的身體止不住地發抖。",
+      "choices": [
+        { "text": "試圖掙脫，大聲求饒", "next_scene_id": "Event_08_Pain_Scream", "attribute_changes": { "idealism": 0, "alienation": 0 } },
+        { "text": "閉起眼睛，不願直視", "next_scene_id": "Event_08_Pain_Silent", "attribute_changes": { "idealism": 0, "alienation": 1 } }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Pain_Scream",
+      "bg_img": "images/bg_hand_torture_blue.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你試圖掙扎，瘋狂道歉、求饒。\n\n他們壓得更用力了，你完全無法動彈。\n\n……………………\n\n劇痛鑽心。那不是人類能忍受的痛楚。\n\n你的慘叫聲響徹偵訊室。\n\n一根、兩根……直到你痛昏過去。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_09_Suicide_Wakeup" }
+      ]
+    },
+    {
+      "scene_id": "Event_08_Pain_Silent",
+      "bg_img": "images/bg_hand_torture_blue.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你害怕地閉起眼睛，彷彿這樣能減少痛苦一些。\n\n恐懼讓你的眼淚不斷流下來，打濕了桌上的紙張。\n\n……………………\n\n劇痛鑽心。那不是人類能忍受的痛楚。\n\n你絕望地放聲大哭。\n\n一根、兩根……直到你痛昏過去。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_09_Suicide_Wakeup" }
+      ]
+    },
+    {
+      "scene_id": "Event_09_Suicide_Wakeup",
+      "bg_img": "images/bg_interrogation_floor_wet.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "不知過了幾天。意識模糊，全身是傷。\n\n你被一盆鹽水潑醒。傷口碰到鹽水，像是無數隻火蟻在啃食。\n\n你看著天花板，絕望地發現：無論你說什麼真話，他們都當作是謊言。\n\n他們想要的「真相」，你根本編不出來。\n\n既然活著只能受折磨，不如結束這一切。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_09_Action" }
+      ]
+    },
+    {
+      "scene_id": "Event_09_Action",
+      "bg_img": "images/bg_wall.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "趁著看守人員轉身點菸的空檔，你看準了牆角的棱角，下定了決心。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_09_Impact" }
+      ]
+    },
+    {
+      "scene_id": "Event_09_Impact",
+      "bg_img": "images/bg_wall.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "媽，對不起...我真的撐不下去了...",
+      "choices": [
+        { "text": "大力撞上去", "next_scene_id": "Event_09_Blackout" }
+      ]
+    },
+    {
+      "scene_id": "Event_09_Blackout",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "「砰！」你奮力撞在牆壁上，瞬間發出一聲悶響。\n\n你的頭上傳來一陣劇痛，接著是一片黑暗。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_09_Cutscene" }
+      ]
+    },
+    {
+      "scene_id": "Event_09_Cutscene",
+      "bg_img": "images/bg_black.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "...",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_10_Cutscene" }
+      ]
+    },
+    {
+      "scene_id": "Event_10_Cutscene",
+      "bg_img": "images/bg_hospital.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "...",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_10_Hospital" }
+      ]
+    },
+    {
+      "scene_id": "Event_10_Hospital",
+      "bg_img": "images/bg_hospital.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你在充滿藥水味的空間中醒來。\n\n異物感促使你伸手摸了自己的頭，這才發現你的頭上纏著厚厚的紗布。\n\n你以為到了天堂，但耳邊傳來的聲音讓你如墜冰窖。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_10_Hospital_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_10_Hospital_2",
+      "bg_img": "images/bg_hospital.png",
+      "char_img": "images/char_investigator.png",
+      "speaker": "調查官", 
+      "text": "命挺硬的嘛，醫生說沒大礙了。\n\n（轉頭對部下說）來，把他拖起來，繼續。\n\n想死？沒那麼容易。你的自白書還沒寫完呢。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_10_Tears" }
+      ]
+    },
+    {
+      "scene_id": "Event_10_Tears",
+      "bg_img": "images/bg_hospital.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你流下了眼淚。\n\n原來在這裡，死亡不是最可怕的，求死不能才是。\n\n你的生命已經不再屬於你自己，你只是一具還沒交出滿意答案的軀殼。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_11_Cutscene" }
+      ]
+    },
+    {
+      "scene_id": "Event_11_Cutscene",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你也不知道你究竟在這個暗無天日的地方過了多少天。\n\n他們好像找到真的炸彈客了，但卻沒有要放過你的意思。\n\n經歷過一次自殺未遂後，又有了第二次...第三次....\n\n你的意志在這個過程中徹底粉碎。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_11_Investigator" }
+      ]
+    },
+    {
+      "scene_id": "Event_11_Script_Intro",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "某天，調查官拿來一份寫好的稿子，語氣變得異常「溫柔」。\n\n他將筆塞進你纏著紗布的手裡。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_11_Investigator" }
+      ]
+    },
+    {
+      "scene_id": "Event_11_Investigator",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "images/char_investigator.png",
+      "speaker": "調查官", 
+      "text": "Fred同學，別撐了。你知道外面發生什麼事嗎？\n\n馬來西亞最近跟共匪眉來眼去的，甚至要在聯合國排擠我們中華民國。\n\n（冷笑）既然你的國家都跟共匪站在一起，那你是個共產黨員，也是很合邏輯的事吧？\n\n簽了它。只要你承認在馬來西亞參加過共產黨，我們就讓你回學校唸書。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_11_Thoughts" }
+      ]
+    },
+    {
+      "scene_id": "Event_11_Thoughts",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "共、產、黨？\n\n這三個字像一道雷劈進你的腦海。\n\n在你的家鄉，那是個禁忌的詞彙。\n\n從小到大，長輩都告訴你：跟那個黨沾上邊，只會家破人亡、萬劫不復。\n\n你千里迢迢來到台灣讀書，以為可以就此遠離紛擾，求個好前程。\n\n現在，他們竟然要把這頂最致命、最讓人恐懼的帽子...扣在你的頭上？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_11_Sign" }
+      ]
+    },
+    {
+      "scene_id": "Event_11_Sign",
+      "bg_img": "images/bg_interrogation.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "看著調查官手中的刑具，和那張荒謬的自白書。\n\n你知道這是唯一的「生路」——儘管那是通往另一個地獄的入口。\n\n你顫抖著手，背棄了家鄉的生存法則，在那份自白書上簽下了名字。\n\n一夕之間，你成為了你從未見過的「馬來亞共產黨黨員」。\n\n至少現在，你終於可以離開這個鬼地方。\n\n如你所預料的，你沒有被送回成大。\n\n你被送往了景美看守所，等待審判降臨。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Court_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Court_Scene",
+      "bg_img": "images/bg_court.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Court_Intro" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Court_Intro",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1971年6月7日，下午。台北，警備總部軍法處法庭。\n\n經過漫長的羈押，你終於等到了開庭的那一天。\n\n開庭那天，氣氛肅殺。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Death_Penalty" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Death_Penalty",
+      "bg_img": "images/bg_court.png",
+      "char_img": "images/char_judge.png",
+      "speaker": "", 
+      "text": "軍法官面無表情地宣讀起訴書。\n\n用來懲治你的法條是《懲治叛亂條例》第二條第一項，就是大家說的「二條一」。\n\n當「死刑」兩個字在法庭迴盪時，你心裡竟然有一絲解脫。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Time_Pass" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Time_Pass",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "3個月後，最終的判決終於下來了。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Verdict" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Verdict",
+      "bg_img": "images/bg_court.png",
+      "char_img": "images/char_judge.png",
+      "speaker": "軍法官", 
+      "text": "（機械式地宣讀）……念其年幼無知，受人蠱惑，姑念其情，減處有期徒刑十二年。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Choice" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Choice",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "他的每一個字都像釘子一樣釘進你的耳朵。\n\n抱著滿腹的委屈，你決定...",
+      "choices": [
+        { "text": "憤怒抗辯，堅稱清白", "next_scene_id": "Event_12_Protest", "attribute_changes": { "idealism": 2, "alienation": 0 } },
+        { "text": "崩潰求死", "next_scene_id": "Event_12_Die", "attribute_changes": { "idealism": 0, "alienation": 2 } }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Protest",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "我根本沒有加入共產黨！那些自白書是被逼出來的！\n\n我根本就不是這個意思！我是冤枉的！",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Protest_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Protest_2",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "法庭上一片死寂。\n\n軍法官連頭都沒抬，書記官繼續低頭記錄。\n\n你的聲音在空蕩的法庭裡迴盪，顯得如此蒼白無力。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Judge_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Die",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "（崩潰地笑）十二年？你不如判我死刑吧！\n\n反正我已經毀了，與其這樣活著受罪，不如現在就殺了我！",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Die_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Die_2",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "這句話似乎終於觸動了法官。\n\n他停下筆，抬頭看了你一眼。\n\n那眼神裡沒有憤怒，也沒有憐憫，只有一種公務員般的麻木。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Judge" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Judge",
+      "bg_img": "images/bg_court.png",
+      "char_img": "images/char_judge.png",
+      "speaker": "軍法官", 
+      "text": "（嘆了口氣，聲音小得只有你能聽見）你以為我想判你嗎？我也只是奉命行事。\n\n判你十二年，上面已經很不高興了...\n\n你也別怨我，要怨，就怨你生錯了時代。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Judge_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Judge_2",
+      "bg_img": "images/bg_court.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "木槌落下。「叩！」",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Cutscene" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Cutscene",
+      "bg_img": "images/bg_justice.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "這一聲清脆的聲響，敲碎了你對「公正廉明」最後的幻想。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_12_Cutscene2" }
+      ]
+    },
+    {
+      "scene_id": "Event_12_Cutscene2",
+      "bg_img": "images/bg_justice.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Chapter_03_Title" }
+      ]
+    },
+    {
+      "scene_id": "Chapter_03_Title",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "第③章\n玻璃窗上的餘溫",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_13_Prison_Intro" }
+      ]
+    },
+    {
+      "scene_id": "Event_13_Prison_Intro",
+      "bg_img": "images/bg_prison_island.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1972年。綠島，國防部綠島感訓監獄（綠洲山莊）。\n\n這裡是火燒島，被太平洋包圍的孤島。\n\n海浪聲日夜拍打著岸邊，對遊客來說是風景，對你來說是困住自由的高牆。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_13_Prison_Intro2" }
+      ]
+    },
+    {
+      "scene_id": "Event_13_Prison_Intro2",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "剛到綠島的前段時間，你把自己封閉起來。\n\n你不再擁有名字，他們叫你227號。\n\n你總是不回應。那是給犯人的編號，而你是清白的。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_13_Guard" }
+      ]
+    },
+    {
+      "scene_id": "Event_13_Guard",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "images/char_guard.png",
+      "speaker": "看守員", 
+      "text": "227號，你不能這樣下去了，出來做事吧。\n\n去圖書館幫忙整理書，總比整天關在牢房裡發霉好。",
+      "choices": [
+        { "text": "「我寧願關到死，也不幫你們做事」", "next_scene_id": "Event_13_Refuse", "attribute_changes": { "idealism": 0, "alienation": 2 } },
+        { "text": "「....好吧，至少能透透氣」", "next_scene_id": "Event_13_Accept", "attribute_changes": { "idealism": 1, "alienation": 0 } }
+      ]
+    },
+    {
+      "scene_id": "Event_13_Refuse",
+      "bg_img": "images/bg_prison_cell.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你選擇了最硬氣、但也最痛苦的路。\n\n你整天關在悶熱潮濕的押房裡，任由恨意啃食你的內心。\n\n身體越來越差，但你覺得這是唯一能保留自尊的方式。",
+      "choices": [
+        { "text": "三年後...", "next_scene_id": "Event_14_Visit_Intro" }
+      ]
+    },
+    {
+      "scene_id": "Event_13_Accept",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你選擇暫時放下身段。\n\n走出牢房呼吸到新鮮空氣的那一刻，你感到一絲解脫。\n\n但隨之而來的是一陣羞愧感。\n\n你試圖說服自己這不是妥協，而是為了活下去。",
+      "choices": [
+        { "text": "三年後...", "next_scene_id": "Event_14_Visit_Intro" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Visit_Intro",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1975年，某個炎熱的午後。牢房走廊。\n\n三年過去了。你總是沈默寡言，像一塊冰冷的石頭。\n\n突然，看守員反常地走到你的牢房門口。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Guard" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Guard",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "images/char_guard.png",
+      "speaker": "看守員", 
+      "text": "227號，著裝！有人來看你。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Thoughts" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Thoughts",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "這番話讓你愣住了。\n\n有人來看你？在台灣舉目無親的你，以為自己早已被所有人遺忘。\n\n誰會來看你？你的腦袋飛速運轉著。",
+      "choices": [
+        { "text": "懷疑是特務的陷阱。", "next_scene_id": "Event_14_Thoughts_A", "attribute_changes": { "idealism": 0, "alienation": 1 } },
+        { "text": "心中燃起一絲微弱的希望。", "next_scene_id": "Event_14_Thoughts_B", "attribute_changes": { "idealism": 1, "alienation": 0 } }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Thoughts_A",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "難不成那些人又回來了？\n\n該不會又是另一次審訊？還是要把你帶去槍斃？\n\n想到這裡，你皺著眉頭往外走去。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Visit" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Thoughts_B",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你的手在顫抖。會不會是你朝思暮想的親人？\n\n下一秒你的理智就打斷你的想法。你的家在幾千公里外的馬來西亞。\n\n你搖搖頭不敢想，卻加快了腳步往外走去。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Visit" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Visit",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你穿過長長的走廊，推開了會客室的門。\n\n透過那層厚厚的防爆玻璃，你看見了一個瘦弱蒼老的身影。\n\n你不可置信地看著玻璃後的人，愣神了整整一分鐘。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Foundout" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Foundout",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "Fred(心想)", 
+      "text": "!!!!!\n\n...是....是...是媽媽！\n\n她...她....她自己一個人，是怎麼找到這裡來的？",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_14_Mother" }
+      ]
+    },
+    {
+      "scene_id": "Event_14_Mother",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "阿媽", 
+      "text": "（聲音顫抖）阿生……係你嗎？你好無？……瘦了好多。",
+      "choices": [
+        { "text": "拿起話筒", "next_scene_id": "Event_15_Phone_Choice" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Phone_Choice",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "", 
+      "text": "媽媽的客家話夾雜著粵語從話筒傳來。\n\n你拿著話筒的手在劇烈顫抖。\n\n喉嚨像是被塞住了棉花，一句話也說不出來。\n\n你們母子倆就這樣隔著玻璃，互相凝視。\n\n你眼含熱淚，吞了吞口水，說道：",
+      "choices": [
+        { "text": "「媽，我是清白的！」", "next_scene_id": "Event_15_Truth", "attribute_changes": { "idealism": 1, "alienation": 0 } },
+        { "text": "「媽，我在這裡過得很好……」", "next_scene_id": "Event_15_Lie", "attribute_changes": { "idealism": 3, "alienation": 0 } }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Truth",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "媽，外面的人說我是共產黨，但我不是！\n\n我真的沒有做壞事，妳一定要相信我……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Truth_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Truth_2",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "", 
+      "text": "母親含淚點頭，那眼神告訴你，她從未懷疑過你。\n\n看守員惡出言警告，要求你不要再談論案情。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Promise" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Lie",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "Fred", 
+      "text": "媽，妳放心...\n\n我在這裡吃得飽、穿得暖，長官對我很好...妳不要擔心。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Lie_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Lie_2",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "", 
+      "text": "你忍住眼淚，編織了最後一個謊言。\n\n這是你作為兒子最後的溫柔，你不想讓她知道你經歷了地獄。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Promise" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Promise",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "images/char_mother.png",
+      "speaker": "", 
+      "text": "你無法想像媽媽是怎麼一個人千里迢迢來到這裡的，她之前從未出國，也不會說中文、英文。\n\n你聽著媽媽說起他們在馬來西亞是為你四處奔走，不惜散盡家財都要救你，你紅了眼眶。\n\n直到這一刻，你才知道家人一直都沒有放棄你。\n\n經過短短的時間，會面時間到了，話筒被切斷。\n\n見無法再說，媽媽慢慢地抬起充滿皺紋的手，貼在玻璃上。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Hands_1" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Hands_1",
+      "bg_img": "images/bg_mother_hand.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Hands_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Hands_2",
+      "bg_img": "images/bg_our_hands.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Hands_3" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Hands_3",
+      "bg_img": "images/bg_our_hands.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你眼含熱淚，也把手放上去。\n\n你們掌心相對，卻感受不到彼此的體溫，只有玻璃冰冷的觸感。\n\n你和媽媽對視著，眼裡含著千言萬語。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Return" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Return",
+      "bg_img": "images/bg_visit_glass.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "看守員似乎在呵斥著，但滿心滿眼都在媽媽身上的你，沒有聽清楚。\n\n.......\n\n最後，你看著媽媽一步三回頭地離開。\n\n那是你這輩子見過最孤單的背影。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Prison_Cry" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Prison_Cry",
+      "bg_img": "images/bg_prison_corridor.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "回到牢房門口，你再也支撐不住。\n\n心心念念的媽媽出現在你眼前，思念、委屈、分離....\n\n一時之間洶湧的情緒在你心中亂竄。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Prison_Fainted" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Prison_Fainted",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你崩潰昏倒在地，不停抽搐。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_15_Prison_Awake" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Prison_Awake",
+      "bg_img": "images/bg_hospital.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_16_Growth" }
+      ]
+    },
+    {
+      "scene_id": "Event_15_Prison_Awake",
+      "bg_img": "images/bg_hospital.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "醒來以後，你的眼神變了。你不再求死。\n\n因為你答應過她，一定要活著回去，回馬來西亞跟她團聚。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_16_Growth" }
+      ]
+    },
+    {
+      "scene_id": "Event_16_Growth",
+      "bg_img": "images/bg_prison_cell.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你決定從此改變，不再消極對抗。\n\n因為你知道，要履行「活著回去」的承諾，你必須讓自己變得強大。\n\n你主動申請了外役工作。",
+      "choices": [
+        { "text": "埋首圖書室，苦讀中文。", "next_scene_id": "Event_16_Study", "attribute_changes": { "idealism": 2, "alienation": 0 } },
+        { "text": "進廚房與洗衣部，學習生存技能。", "next_scene_id": "Event_16_Work", "attribute_changes": { "idealism": 1, "alienation": 0 } }
+      ]
+    },
+    {
+      "scene_id": "Event_16_Study",
+      "bg_img": "images/bg_prison_library.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你發現自己中文不好，是當初被欺負的原因之一。\n\n你在圖書館瘋狂閱讀，甚至把整部字典背下來。\n\n你也開始教難友英文，在知識中找回了尊嚴。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_16_Study_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_16_Study_Scene",
+      "bg_img": "images/bg_prison_library.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Chapter_04_Title" }
+      ]
+    },
+    {
+      "scene_id": "Event_16_Work",
+      "bg_img": "images/bg_prison_laundry.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你放下大學生的身段，進廚房學切菜煮飯，去洗衣部學如何洗掉最頑強的油漬。\n\n你讓自己變得像個「社會人」，變得更強悍、更實際。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_16_Work_Scene" }
+      ]
+    },
+    {
+      "scene_id": "Event_16_Work_Scene",
+      "bg_img": "images/bg_prison_laundry.png",
+      "hide-ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "",
+      "choices": [
+        { "text": "...", "next_scene_id": "Chapter_04_Title" }
+      ]
+    },
+    {
+      "scene_id": "Chapter_04_Title",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "第④章\n街頭的春夏秋冬",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_17_Release" }
+      ]
+    },
+    {
+      "scene_id": "Event_17_Release",
+      "bg_img": "images/bg_prison_gate.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1983年3月2日。台北，土城仁愛教育實驗所門口。\n\n十二年的刑期終於結束了。\n\n大鐵門緩緩打開，你走出圍牆，陽光刺眼得讓你睜不開眼。\n\n門外沒有熟悉的身影在等你。\n\n幾個官員看到你以後，湊了過來。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_17_Release_Officer" }
+      ]
+    },
+    {
+      "scene_id": "Event_17_Release_Officer",
+      "bg_img": "images/bg_prison_gate.png",
+      "char_img": "images/char_stranger_smirk.png",
+      "speaker": "官員", 
+      "text": "Fred，恭喜你重新獲得自由了。\n\n知識啊，你知道的事情太多，我們不能讓你出境。\n\n你就乖乖留在臺灣，不要再惹什麼麻煩。\n\n還有，你問的事情，上面說了，我們也沒辦法發給你身分證，你自己看著辦。\n\n講完了，你可以走了。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_18_Street" }
+      ]
+    },
+    {
+      "scene_id": "Event_18_Street",
+      "bg_img": "images/bg_street.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你站在車水馬龍的街頭，手裡只有幾件破舊的衣服。\n\n這麼多年過去，你已經被退學了。大學和宿舍都回不去了。\n\n而沒有身分證，意味著你不能工作、不能租房、不能開戶。\n\n你成了這片土地上的幽靈。\n\n這就是得來不易的「自由」？結果這比監獄還慘。\n\n你試著找工作，從講英語的，到洗碗的都問過了。\n\n但老闆一聽你沒有身分證，又剛從綠島回來，無一例外地，都像躲瘟神一樣把你趕走。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_18_Street_Night" }
+      ]
+    },
+    {
+      "scene_id": "Event_18_Street_Night",
+      "bg_img": "images/bg_street_night.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "無處落腳的你，只好在街頭上找個好角落過了一晚。\n\n一晚、兩晚、三晚......數不清的夜晚。\n\n身無分文的你，輾轉之下，流落到了台北最繁華也最混亂的地方——萬華龍山寺。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_19_Food" }
+      ]
+    },
+    {
+      "scene_id": "Event_19_Food",
+      "bg_img": "images/bg_garbage.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1984年，寒冬。龍山寺附近的暗巷。\n\n你的頭髮糾結，衣服發臭，和那些你曾經避之唯恐不及的遊民睡在一起。\n\n已經流浪一年了。飢餓是唯一的感覺。你盯著小吃店後巷的餿水桶。\n\n裡面混雜著客人吃剩的飯菜，酸臭味中夾雜著一點油肉香。\n\n你看著它，心想：",
+      "choices": [
+        { "text": "為了活著，吃下去", "next_scene_id": "Event_19_Eat_Live", "attribute_changes": { "idealism": 2, "alienation": 0 } },
+        { "text": "邊吃邊咒罵這個世界", "next_scene_id": "Event_19_Eat_Hate", "attribute_changes": { "idealism": 0, "alienation": 2 } }
+      ]
+    },
+    {
+      "scene_id": "Event_19_Eat_Live",
+      "bg_img": "images/bg_garbage.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "我要活著……我答應過阿母，一定要活著回去見她。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_19_Eat_Live_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_19_Eat_Live_2",
+      "bg_img": "images/bg_garbage.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你閉上眼，把那團混雜著湯水的剩飯吞下去。\n\n每一口都在踐踏你的自尊，但每一口也都在滋養你的生命。\n\n你告訴自己，這不是乞討，這是為了重逢的戰鬥。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_20_Crossroad" }
+      ]
+    },
+    {
+      "scene_id": "Event_19_Eat_Hate",
+      "bg_img": "images/bg_garbage.png",
+      "char_img": "",
+      "speaker": "Fred (內心)", 
+      "text": "我這麼落魄，都是拜你們所賜。\n\n總有一天，我要你們加倍奉還。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_19_Eat_Hate_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_19_Eat_Hate_2",
+      "bg_img": "images/bg_garbage.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你大口吞嚥著餿水，淚水混著髒污流下。\n\n心中的恨意比胃酸還滾燙。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_20_Crossroad" }
+      ]
+    },
+    {
+      "scene_id": "Event_20_Crossroad",
+      "bg_img": "images/bg_street_night.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "1986年。龍山寺噴水池畔。\n\n流浪的第三年，你的身心都逼近極限。\n\n手裡緊握著那塊尖銳的石頭，你看著水面倒映出自己落魄的臉。\n\n這三年來，你像個幽靈一樣活著，沒有名字，沒有聲音。\n\n你忍不住開始思考，這樣的日子，可以過多久？未來該往哪裡走？\n\n你的腦海中，不同的念頭正在廝殺。",
+      "choices": [
+        { "text": "「我吞不下這口氣。我要讓他們付出代價。」", "next_scene_id": "Ending_01_Revenge","condition": "alienation - idealism > 4", "hint": "心中愛恨交織的你，\n無法狠下心做這個決定。\n請提升「疏離」。" },
+        { "text": "「這座島嶼是地獄，我要逃走。」", "next_scene_id": "Ending_02_Escape","condition": "alienation > 8", "hint": "這裡有太多你牽掛的事。\n請提升「疏離」。" },
+        { "text": "「不能死……為了母親，我要活下去。」", "next_scene_id": "Event_21_Survival" }
+      ]
+    },
+    { "scene_id": "Ending_01_Revenge",
+      "bg_img": "images/bg_street_night.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "這些經歷讓你逐漸被仇恨吞沒。\n\n那天以後，你依然睡在龍山寺的迴廊下，白天和其他遊民一樣翻找餿水、撿拾廢紙。\n\n在別人眼裡看似呆滯的你，腦中卻在進行精密的化學運算。\n\n你省下每一塊撿破爛換來的錢，餓著肚子，只為了去化工行分批購買那些敏感的材料。\n\n你躲在無人的暗巷角落，用你那雙本該在實驗室裡拿試管的手，小心翼翼地調配著最後的「作品」。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_2" }
+      ]
+    },
+    {
+      "scene_id": "Ending_01_Revenge_2",
+      "bg_img": "images/bg_street_night.png",
+      "char_img": "images/bomb.png",
+      "speaker": "", 
+      "text": "你的「作品」完成了。你看著它，沉思良久。\n\n你攥緊拳頭，暗暗下定決心。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_3" }
+      ] 
+    },
+    {
+      "scene_id": "Ending_01_Revenge_3",
+      "bg_img": "images/bg_before_explosion.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你來到當年他們判你罪的法院外，在街角小心翼翼地觀察著。\n\n看見那些熟悉又令人作嘔的徽章，你嘴角勾起一抹淒涼的笑。\n\n埋伏幾天，你終於等到合適的機會，安置你的「作品」。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_4" }
+      ] 
+    },
+    {
+      "scene_id": "Ending_01_Revenge_4",
+      "bg_img": "images/bg_before_explosion.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "當年你們誣賴我在圖書館放炸彈，毀了我的一生。\n\n我這生從來沒有想過要傷害任何人。\n\n是你們教會我，在這個世界，講道理是無用的，暴力才是真理。\n\n既然你們這麼希望我是個炸彈客……那我就成全你們。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_5" }
+      ] 
+    },
+    {
+      "scene_id": "Ending_01_Revenge_5",
+      "bg_img": "images/bg_explosion.png",
+      "hide_ui": true,
+      "char_img": "",
+      "speaker": "", 
+      "text": "...",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_6" }
+      ] 
+    },
+    {
+      "scene_id": "Ending_01_Revenge_6",
+      "bg_img": "images/bg_explosion.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你按下了開關。\n\n只有一聲巨響，和吞沒一切的白光。\n\n那一刻，那個虛構的謊言變成了真實。\n\n你用這種慘烈的方式，把當年他們硬塞給你的罪名，連同你自己破碎的靈魂，一起還給了這個體制。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_01_Revenge_End" }
+      ] 
+    },
+    {
+      "scene_id": "Ending_01_Revenge_End",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "您解鎖了：\n結局①\n玉石俱焚",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue" }
+      ]
+    },
+    {
+      "scene_id": "Ending_02_Escape",
+      "bg_img": "images/bg_sea_night.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "恐懼戰勝了一切。\n\n你聯繫了道上兄弟，跳上了一艘不知開往何處的偷渡船。\n\n看著台灣的海岸線在夜色中越來越遠，你心裡沒有解脫的喜悅，只有一片空洞。\n\n你或許回到了馬來西亞，或許流浪到了另一個國家。\n\n但你沒有回家見母親，也沒有聯絡當年的朋友。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_02_Escape_1" }
+      ]
+    },
+    {
+      "scene_id": "Ending_02_Escape_1",
+      "bg_img": "images/bg_sea_night.png",
+      "char_img": "",
+      "speaker": "【系統】", 
+      "text": "很多年以後……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_02_Escape_2" }
+      ]
+    },
+    {
+      "scene_id": "Ending_02_Escape_2",
+      "bg_img": "images/bg_sea_night.png",
+      "char_img": "",
+      "speaker": "無名老人 (內心)", 
+      "text": "我不是Fred，Fred已經死了。\n\n他死在綠島的霉味裡，死在龍山寺的餿水桶旁。\n\n我不願意再當那個受害者，也不想去面對破碎的過去。\n\n我不想再回到臺灣或者馬來西亞。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_02_Escape_3" }
+      ]
+    },
+    {
+      "scene_id": "Ending_02_Escape_3",
+      "bg_img": "images/bg_sea_night.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你活下來了，但你選擇了自我放逐。\n\n你不再是Fred。你只是一個沒有過去、拒絕未來的旅人。\n\n你四處漂泊，只為了逃離那個名為「記憶」的監獄。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_02_Escape_End" }
+      ]
+    },
+    {
+      "scene_id": "Ending_02_Escape_End",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "您解鎖了：\n結局②\n無根的漂泊",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue" }
+      ]
+    },
+    {
+      "scene_id": "Event_21_Survival",
+      "bg_img": "images/bg_wedding.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你選擇了活下去。\n\n好心人的一碗飯救了你。\n\n幾個月後，你終於拿到了身分證和護照。\n\n1988年，你帶著台灣女朋友回到馬來西亞見母親，完成了「活著回去」的承諾。\n\n之後的二十年，你在台灣結婚生子、做生意、養家活口。\n\n你刻意把那十二年的記憶鎖進心底最深處的箱子裡。\n\n你成为了一個好丈夫、好父親。\n\n你的家人只知道你坐過牢，卻不知道你在那個地獄裡經歷了什麼。\n\n你以為只要不提，傷口就會癒合。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_22_TheCall" }
+      ]
+    },
+    {
+      "scene_id": "Event_22_TheCall",
+      "bg_img": "images/bg_home.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "2009年，某個深夜。\n\n一通電話打破了你平靜的退休生活。\n\n電話那頭是人權博物館的志工，他們正在收集白色恐怖受難者的故事。\n\n他希望能採訪你，甚至邀請你回到景美看守所導覽。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_22_TheCall_2" }
+      ]
+    },
+    {
+      "scene_id": "Event_22_TheCall_2",
+      "bg_img": "images/bg_home.png",
+      "char_img": "",
+      "speaker": "志工", 
+      "text": "Fred先生，您的經歷很重要。我們希望它能被後輩記著。\n\n我們擔心如果不說出來，這段歷史就會被遺忘。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Event_22_TheCall_3" }
+      ]
+    },
+    {
+      "scene_id": "Event_22_TheCall_3",
+      "bg_img": "images/bg_home.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你說你需要時間考慮。\n\n掛上電話，你發現自己的手在發抖。\n\n那個箱子被打開了一條縫，血淋淋的記憶湧了出來。\n\n恐懼感再次襲來，就像當年在偵訊室一樣。\n\n這通電話讓你輾轉難眠了幾個夜晚，你終於準備好回撥給他們。",
+      "choices": [
+        { "text": "拒絕受訪", "next_scene_id": "Ending_03_Silent"},
+        { "text": "答應受訪", "next_scene_id": "Ending_04_True","condition": "idealism > 8", "hint": "你需要更堅定的理想，\n才能戰勝恐懼。\n請提升「理想」。" }
+      ]
+    },
+    {
+      "scene_id": "Ending_03_Silent",
+      "bg_img": "images/bg_home.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "我好不容易才有了正常的生活。\n\n什麼要回去掀開傷疤？萬一又惹上麻煩怎麼辦？\n\n過去的事情，就讓他過去吧。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_03_Silent_2" }
+      ]
+    },
+    {
+      "scene_id": "Ending_03_Silent_2",
+      "bg_img": "images/bg_fire.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你禮貌地回絕了採訪，並請他們未來不要再聯繫你。\n\n夜裡，你小心翼翼地拿出他們寄給你的那些資料和信件。\n\n你用打火機把它們都點燃，並放在爐子裡燃燒。\n\n火光照亮了你疲憊的臉。\n\n你看著灰燼隨風飄散，心想：「這樣對大家都好」。\n\n你繼續過著安穩的日子，含飴弄孫。\n\n但每當夜深人靜，電鈴聲響起，或者看到電視上的政治新聞，你的心跳還是會漏一拍。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_03_Silent_End" }
+      ]
+    },
+    {
+      "scene_id": "Ending_03_Silent_End",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "您解鎖了：\n結局③\n沈默的傷痕",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue" }
+      ]
+    },
+    {
+      "scene_id": "Ending_04_True",
+      "bg_img": "images/bg_home.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "如果我不說，那些死去的難友就真的白死了。\n\n我有責任告訴年輕人真相，為了讓這種悲劇不再發生。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_04_True_2" }
+      ]
+    },
+    {
+      "scene_id": "Ending_04_True_2",
+      "bg_img": "images/bg_museum.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "經過無數次的掙扎，你終於決定站出來。\n\n在家中練習幾十遍以後，你終於走進那個當年判你刑的法庭。\n\n這次你不是被告，你是講述者。\n\n面對台下稚嫩的學生，你拿著麥克風，手不再顫抖。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_04_True_3" }
+      ]
+    },
+    {
+      "scene_id": "Ending_04_True_3",
+      "bg_img": "images/bg_museum.png",
+      "char_img": "",
+      "speaker": "Fred", 
+      "text": "我22歲那年，就是在這裡，聽到軍法官判我坐牢十二年……",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_04_True_4" }
+      ]
+    },
+    {
+      "scene_id": "Ending_04_True_4",
+      "bg_img": "images/bg_museum.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "你看著學生們專注的眼神，感覺到肩上的重擔卸下了。\n\n你發現，把故事說出來，並不可怕。\n\n你用你的苦難，澆灌了台灣民主的土壤。\n\n你不再只是受害者，你成為了歷史的見證者與人權的捍衛者。\n\n這才是你對那個荒謬時代，最溫柔也最強大的反擊。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Ending_04_True_End" }
+      ]
+    },
+    {
+      "scene_id": "Ending_04_True_End",
+      "bg_img": "images/bg_black.png",
+      "char_img": "",
+      "speaker": "【章節】", 
+      "text": "您解鎖了：\n結局④\n真相的力量",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue" }
+      ]
+    },
+    {
+      "scene_id": "Epilogue",
+      "bg_img": "images/bg_diploma.png",
+      "char_img": "",
+      "speaker": "【系統】", 
+      "text": "恭喜你來到遊戲的尾聲。\n接下來，你可以……",
+      "choices": [
+        { "text": "主角Fred的真實經歷", "next_scene_id": "Epilogue_01" },
+        { "text": "回到結局分歧點 (保留現有數值)", "next_scene_id": "Event_20_Crossroad" },
+        { "text": "回到一切的起點 (清空現有數值)", "next_scene_id": "Chapter_01_Title" },
+        { "text": "結局蒐集進度", "next_scene_id": "Gallery_View" },
+        { "text": "遊戲資料&幕後人員", "next_scene_id": "Developer" }
+      ]
+    },
+    {
+      "scene_id": "Epilogue_01",
+      "bg_img": "images/bg_diploma.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "這不只是一個遊戲，這是一段真實的人生。\n\n遊戲中的主角Fred，原型來自馬來西亞華僑陳欽生先生。\n\n1971年，22歲的他被捲入冤案，遭受酷刑與12年冤獄，人生被強制暫停。\n\n直到2017年，在各界奔走下，他終於以榮譽校友的身分回到成功大學，領取了那張遲到半個世紀的畢業證書。\n\n1968年那個充滿理想的年輕僑生，與2017年的倖存者，終於在時光的長廊盡頭重逢。\n\n這張證書證明的，不只是學業的完成，更是一個人在時代巨輪下，拒絕被碾碎的尊嚴。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue_02" }
+      ]
+    },
+    {
+      "scene_id": "Epilogue_02",
+      "bg_img": "images/bg_diploma.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "歷史無法重來，但未來可以選擇。\n\n我們製作這款遊戲，是為了讓這段被遺忘的聲音再次被聽見。\n\n如果您在遊戲中感受到了一絲無力或觸動，請不要讓這份感覺消失。\n\n我們邀請您用行動，延續這份記憶：\n1. 。\n2. 【深入閱讀】：閱讀陳欽生回憶錄《謊言世界 我的真相》。\n3. 【持續關注】：因為「記憶」是對抗重演最強大的力量。",
+      "choices": [
+        { "text": "親身走訪參觀國家人權博物館景美園區", "next_scene_id": "https://www.nhrm.gov.tw/w/nhrm/JMParks" },
+        { "text": "支持陳欽生回憶錄《謊言．真相：陳欽生生命故事》", "next_scene_id": "https://www.books.com.tw/products/0011039213?sloc=main" },
+        { "text": "觀看陳欽生的口述歷史影片", "next_scene_id": "https://youtu.be/EGF23220yss?si=mMXF36_i37UjBITP" },
+        { "text": "分享這個遊戲，因為「記憶」是最強大的力量", "next_scene_id": null }
+      ]
+    },
+    {
+      "scene_id": "Epilogue_02",
+      "bg_img": "images/bg_diploma.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "歷史無法重來，但未來可以選擇。\n\n我們製作這款遊戲，是為了讓這段被遺忘的聲音再次被聽見。\n\n如果您在遊戲中感受到了一絲無力或觸動，請不要讓這份感覺消失。\n\n我們邀請您用行動，延續這份記憶：\n1. 【親身走訪】：參觀國家人權博物館（景美/綠島），親身感受歷史的重量。\n2. 【深入閱讀】：閱讀陳欽生回憶錄《謊言世界 我的真相》。\n3. 【持續關注】：因為「記憶」是對抗重演最強大的力量。",
+      "choices": [
+        { "text": "...", "next_scene_id": "Epilogue" }
+      ]
+    },
+    {
+      "scene_id": "Gallery_View",
+      "bg_img": "images/bg_diploma.png",
+      "char_img": "",
+      "speaker": "", 
+      "text": "", 
+      "choices": [
+        { "text": "返回選單", "next_scene_id": "Epilogue" }
+      ]
+    }
+  ]
+}
