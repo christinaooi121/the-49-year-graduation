@@ -10,11 +10,11 @@ let unlockedEndings = JSON.parse(localStorage.getItem('fred_endings')) || {
 };
 
 let typewriter = {
-    fullText: "", timer: null, index: 0, speed: 40, isTyping: false
+    fullText: "", timer: null, index: 0, speed: 50, isTyping: false
 };
 
-const SPEED_NORMAL = 40;   
-const SPEED_SYSTEM = 80;   
+const SPEED_NORMAL = 50;   
+const SPEED_SYSTEM = 70;   
 const SPEED_CHAPTER = 150; 
 
 // --- 1. 初始化 ---
@@ -23,15 +23,14 @@ async function initGame() {
         const response = await fetch('data.json');
         if (!response.ok) throw new Error("無法讀取 data.json");
         gameData = await response.json();
-        // 這裡請改回 Chapter_00_Title，方便從頭測試
-        renderScene("Event_16_Growth"); 
+        renderScene("Cover"); 
     } catch (error) {
         console.error(error);
         document.getElementById('dialogue-text').innerText = "讀取失敗";
     }
 }
 
-// --- 2. 渲染場景 (修正：允許空文字) ---
+// --- 2. 渲染場景 (含標題模式) ---
 function renderScene(sceneId) {
     console.log("正在進入場景:", sceneId);
 
@@ -55,18 +54,26 @@ function renderScene(sceneId) {
     updateVisuals(currentScene);
     const gameContainer = document.getElementById('game-container');
     
-    // 純畫面模式 (hide-ui)
-    if (currentScene.hide_ui || currentScene['hide-ui']) { // 相容兩種寫法
+    // 1. 純畫面模式 (hide-ui)
+    if (currentScene.hide_ui || currentScene['hide-ui']) {
         gameContainer.classList.add('hide-ui');
     } else {
         gameContainer.classList.remove('hide-ui');
     }
 
-    // 畫廊模式標籤
+    // 2. 畫廊模式標籤
     if (sceneId === "Gallery_View") {
         gameContainer.classList.add('gallery-active');
     } else {
         gameContainer.classList.remove('gallery-active');
+    }
+
+    // 3. 【新增】標題模式標籤 (Title Mode)
+    // 只要 JSON 裡有 "is_title": true，就啟動這個模式
+    if (currentScene.is_title) {
+        gameContainer.classList.add('title-mode');
+    } else {
+        gameContainer.classList.remove('title-mode');
     }
 
     // E. 樣式與狀態更新
@@ -83,12 +90,10 @@ function renderScene(sceneId) {
         return; 
     }
 
-    // F. 文字處理邏輯 (關鍵修正！)
-    // 只有當 text 真的有內容時，才分割文字
+    // F. 文字處理邏輯
     if (currentScene.text && currentScene.text.trim() !== "") {
         dialogueQueue = currentScene.text.split(/\n\s*\n/);
     } else {
-        // 如果 text 是空的，就讓佇列為空，直接進入 setupInteraction
         dialogueQueue = [];
     }
 
@@ -104,13 +109,13 @@ function renderGalleryContent() {
     dialogueBox.classList.add('style-gallery');
     
     const endingInfo = [
-        { id: 1, title: "玉石俱焚", icon: "🔥" },
+        { id: 1, title: "玉石俱焚", icon: "💥" },
         { id: 2, title: "無根的漂泊", icon: "🌊" },
-        { id: 3, title: "沈默的傷痕", icon: "😶" },
-        { id: 4, title: "真實的力量", icon: "⚖️" }
+        { id: 3, title: "沈默的傷痕", icon: "🤐" },
+        { id: 4, title: "真實的力量", icon: "🎤" }
     ];
 
-    let html = `<div style="text-align:center; font-weight:bold; margin-bottom:10px; color:#f0c040;">結局蒐集進度</div>`;
+    let html = `<div style="text-align:center; font-weight:bold; margin-bottom:10px; color:#f0c040;">【結局蒐集進度】</div>`;
     html += `<div class="gallery-grid">`;
 
     endingInfo.forEach(end => {
@@ -219,11 +224,12 @@ function finishTypingImmediately(onComplete) {
     if (onComplete) onComplete();
 }
 
-// --- 6. 選項互動邏輯 (防穿透修正版) ---
+// --- 6. 選項互動邏輯 (支援標題雙擊版) ---
 function setupInteraction(choices) {
     const dialogueBox = document.getElementById('dialogue-box');
     const nextIndicator = document.querySelector('.next-indicator');
     const overlay = document.getElementById('choices-overlay');
+    const gameContainer = document.getElementById('game-container');
 
     // 重置介面
     overlay.innerHTML = '';
@@ -233,12 +239,27 @@ function setupInteraction(choices) {
     // 先移除所有點擊，避免誤觸
     dialogueBox.classList.remove('clickable');
     dialogueBox.onclick = null;
+    dialogueBox.ondblclick = null; // 清除雙擊事件
 
-    const isHiddenUI = document.getElementById('game-container').classList.contains('hide-ui');
+    const isHiddenUI = gameContainer.classList.contains('hide-ui');
     const isGallery = dialogueBox.classList.contains('style-gallery');
+    const isTitle = gameContainer.classList.contains('title-mode');
+
+    // --- 優先級 1: 標題模式 (Title Mode) ---
+    // 需求：不顯示按鈕，雙擊螢幕任意處開始
+    if (isTitle) {
+        // 因為 CSS 已經把 dialogueBox 變成全螢幕透明層了，直接綁定在它上面
+        dialogueBox.classList.add('clickable');
+        
+        dialogueBox.ondblclick = () => {
+            if (choices && choices.length > 0) {
+                executeChoice(choices[0]);
+            }
+        };
+        return; // 設定完成，結束函式
+    }
     
-    // --- 優先級 1: 純畫面模式 (Hide UI) ---
-    // 這種模式下，我們加入 200ms 的緩衝，防止上一頁的點擊直接觸發這頁
+    // --- 優先級 2: 純畫面模式 (Hide UI) ---
     if (isHiddenUI) {
         setTimeout(() => {
             dialogueBox.classList.add('clickable');
@@ -247,7 +268,7 @@ function setupInteraction(choices) {
                     executeChoice(choices[0]);
                 }
             };
-        }, 600); // 延遲 0.2 秒才啟用點擊
+        }, 200); 
         return; 
     }
 
@@ -284,20 +305,19 @@ function setupInteraction(choices) {
         overlay.classList.add('active');
     };
 
-    // --- 優先級 2: 畫廊模式 ---
+    // --- 優先級 3: 畫廊模式 ---
     if (isGallery) {
         showButtons();
         return;
     }
 
-    // --- 優先級 3: 一般劇情模式 ---
+    // --- 優先級 4: 一般劇情模式 ---
     const isSingleEllipsis = (choices && choices.length === 1 && choices[0].text === "...");
 
     if (!dialogueBox.classList.contains('style-chapter')) {
         nextIndicator.style.display = 'block';
     }
     
-    // 為了保險起見，一般模式也可以加極短的延遲 (50ms)，或直接執行
     setTimeout(() => {
         dialogueBox.classList.add('clickable');
         dialogueBox.onclick = () => {
@@ -311,7 +331,7 @@ function setupInteraction(choices) {
                  console.log("無選項 (End)");
             }
         };
-    }, 50); // 微小延遲確保穩定
+    }, 50);
 }
 
 function checkCondition(conditionStr) {
@@ -339,13 +359,25 @@ function hideToast() {
 }
 
 function executeChoice(choice) {
+    // 1. 處理數值變化
     if (choice.attribute_changes) {
         attributes.idealism += (choice.attribute_changes.idealism || 0);
         attributes.alienation += (choice.attribute_changes.alienation || 0);
     }
-    if (choice.next_scene_id) renderScene(choice.next_scene_id);
-}
 
+    // 2. 檢查 next_scene_id 是否存在
+    if (choice.next_scene_id) {
+        // 【新增功能】檢查是否為外部連結 (http 開頭)
+        if (choice.next_scene_id.startsWith('http')) {
+            // 使用 window.open 開啟新分頁，避免玩家跳出遊戲
+            window.open(choice.next_scene_id, '_blank');
+        } 
+        // 否則，視為內部場景 ID，進行遊戲跳轉
+        else {
+            renderScene(choice.next_scene_id);
+        }
+    }
+}
 function updateVisuals(scene) {
     const bgImg = document.getElementById('bg-img');
     const charImg = document.getElementById('char-img');

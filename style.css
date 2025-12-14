@@ -251,13 +251,44 @@ body {
 .typing-cursor::after { content: '▋'; color: #fff; animation: blink 1s infinite; margin-left: 5px; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-#dialogue-box.style-gallery.clickable:active {
-    transform: translate(-50%, -50%) !important;
-    /* 如果想要有點擊感，可以只縮放，不位移 */
-    transform: translate(-50%, -50%) scale(0.99) !important;
+/* --- 標題畫面模式 (Title Mode) --- */
+
+/* 1. 隱藏數值欄 */
+.title-mode #status-bar {
+    opacity: 0 !important;
+    pointer-events: none;
 }
 
-/* 確保畫廊模式下的滑鼠游標是正常的 (因為我們不希望玩家點盒子本身) */
-#dialogue-box.style-gallery {
-    cursor: default; 
+/* 2. 讓隱形對話框鋪滿全螢幕，變成「雙擊感應區」 */
+.title-mode #dialogue-box {
+    /* 強制隱形但存在 */
+    opacity: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    
+    /* 鋪滿全螢幕 */
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    max-width: none !important;
+    max-height: none !important;
+    
+    /* 關鍵：允許接收滑鼠事件 */
+    pointer-events: auto !important;
+    
+    /* 滑鼠游標變成手指，暗示可點擊 */
+    cursor: pointer; 
+}
+
+/* 3. 隱藏按鈕層 (雙重保險，確保看不到任何按鈕) */
+.title-mode #choices-overlay {
+    display: none !important;
+}
+
+/* (可選) 防止手機雙擊時觸發縮放，提升體驗 */
+#game-container {
+    touch-action: manipulation;
 }
