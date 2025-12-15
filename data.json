@@ -914,7 +914,7 @@
       "speaker": "", 
       "text": "法庭上一片死寂。\n\n軍法官連頭都沒抬，書記官繼續低頭記錄。\n\n你的聲音在空蕩的法庭裡迴盪，顯得如此蒼白無力。",
       "choices": [
-        { "text": "...", "next_scene_id": "Event_12_Judge_2" }
+        { "text": "...", "next_scene_id": "Event_12_Justice" }
       ]
     },
     {
